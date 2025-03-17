@@ -1,12 +1,16 @@
+
+
 body
 {
     font-family: Arial,Arial, Helvetica, sans-serif sans-serif;
     font-size: 100%;
 
 }
-link:hover
-{
-    font-style: italic;
-     color: #800000;
+link:hover {
+    
+        font-style: italic;
+        color: #800000;
 }
+
+
 
