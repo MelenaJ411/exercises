@@ -118,7 +118,20 @@ section {
 	border-bottom: 2px solid var(--accent-color);
 }
 
+.speaker {
+	& h1 {
+		color : var(--accent-color);
+	}
 
+	& h2 {
+		color: black;
+	}
+
+	& p {
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+}
 
 
 
