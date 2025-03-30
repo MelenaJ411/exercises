@@ -14,8 +14,10 @@
 /* default styles */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
+	font-size: calc(90% + 0.2vw);
+	line-height: 1.5;
 	width: 80%;
+	max-width: 1024px;
 	margin: auto;
 	border: 2px solid var(--accent-color);
 }
@@ -24,7 +26,7 @@ a:hover, a:focus{
 	color: var(--accent-color);
 }
 h1, h2, h3, p, ul {
-	padding: .5em 0;
+	padding: .25em 0;
 }
 h1 {
 	font-size: 150%;
@@ -42,6 +44,7 @@ ul {
 
 /* the styles for the header */
 header {
+	line-height: 1.2;
 	border-bottom: 2px solid var(--accent-color);
 	background-image: linear-gradient(
 	    30deg, var(--gradient-color) 0%, white 30%, white 65%, var(--gradient-color) 100%);
@@ -57,16 +60,15 @@ header {
 	& img {
 		float: left;
 		margin: .75em 1em;
+		width : (40px , 100%, 80px);
 	}
 }
 
 /* the styles for the main content */
 main {
+	display: flex;
 	padding: 0 1em 1em;
-	& h1 {
-		border-top: 2px solid var(--accent-color);
-		border-bottom: 2px solid var(--accent-color);
-	}
+	
 	& blockquote {
 		font-style: italic;
 		padding-left: 1em;
@@ -91,3 +93,32 @@ footer {
 .large {
 	font-size: 125%;
 }
+
+aside {
+	flex-basis: 25%;
+
+	& img {
+		width : (40px, 100%, 75px);
+	}
+}
+
+section {
+	flex-basis: 75%;
+
+	& img {
+		float: right;
+		margin: .5em;
+		width: (100px , 100%, 250px);
+
+	}
+}
+
+.featured {
+	border-top: 2px solid var(--accent-color);
+	border-bottom: 2px solid var(--accent-color);
+}
+
+
+
+
+
