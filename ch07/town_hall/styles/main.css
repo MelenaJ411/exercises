@@ -126,3 +126,46 @@ footer {
 .large {
 	font-size: 125%;
 }
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	
+	& li {
+		flex-basis: 20%;
+		text-align: center;
+	}
+	
+}
+
+:root {
+	--menu-light-color: #ffffff;
+	--menu-mid-color: #faebd7;
+	--menu-dark-color: #000000;
+}
+
+.navbar {
+
+	background-color: var(--accent-color);
+
+	& a {
+
+		display: block;
+		margin : 0 1px 2px;
+		padding: 1em;
+		text-decoration: none;
+		color: var(--menu-light-color);
+
+	}
+
+	& a:hover, & a:focus, & a.current {
+		background-color: var(--menu-mid-color);
+		color: var(--menu-dark-color);
+	}
+
+	& ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
