@@ -168,4 +168,37 @@ footer {
 		padding: 0;
 		list-style: none;
 	}
+
+}
+
+.menu li:has(.submenu) {
+	position: relative;
+	& small {
+		margin-left: 0.5em;
+	}
+	&:first-child a {
+		margin-left: 0;
+	}
+
+	&:last-child a {
+		margin-right: 0;
+	}
+
+	& .submenu > li a {
+		margin: 0 2px 2px;
+	}
+	& .submenu {
+		
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right : 0;
+		background-color: var(--accent-color);
+		color: var(--menu-light-color);
+	}
+
+	&:hover > .submenu {
+		display: block;
+	}
 }
