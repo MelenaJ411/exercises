@@ -55,6 +55,7 @@ header {
 	& h2 {
 		font-size: 175%;
 		padding: .5em 0 0 0;
+		font-family: 'Castellar', serif;
 	}
 	& h3 {
 		font-size: 130%;
