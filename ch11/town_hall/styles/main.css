@@ -206,6 +206,42 @@ footer {
 }
 
 
+
+
+table {
+	border-top: #800000 2px solid; 
+	border-collapse: collapse;
+	text-align: left;
+	
+	} 
+
+	tr {
+		
+	}
+
+	th, td {
+	border-top: #800000 3px solid;
+	padding: 0.7em .7em;
+	 
+	
+	}
+	 
+	tfoot { 
+		font-weight: bold; 
+	}
+
+	.right {
+	
+	}
+	.left {
+		
+	}
+
+	
+		
+	
+
+
 /* media queries */
 @media only screen and (min-width: 922px) {
 	main {
