@@ -108,6 +108,10 @@ footer {
 	}
 }
 
+video {
+	width:90%;
+}
+
 /* CSS class */
 .featured {
 	border-top: 2px solid var(--accent-color);
@@ -199,6 +203,7 @@ footer {
 	color: var(--light_menu);
 	display: none;
 	& > li a { margin: 2px; }
+	z-index: 1;
 }
 
 
