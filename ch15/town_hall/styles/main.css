@@ -96,7 +96,31 @@ section {
 /* the styles for the aside */
 aside {
 	padding-right: .5em;
+	& img {
+		transition: transform 2s;
+	}
+	& img:hover {
+		/*transform: translateX(30px);*/
+		transform: rotate(180deg);
+		transform-origin: right center;
+		animation: spin-filter 2s linear;
+		filter: brightness(1.2) contrast(1.3);
+
+		
+	}
 }
+
+@keyframes spin-filter {
+			from {
+				transform: rotate(0deg);
+				filter: brightness(1) contrast(1);
+			}
+			to {
+				transform: rotate(180deg);
+				filter: brightness(1.2) contrast(1.3);
+			}
+		}
+
 
 /* the styles for the footer */
 footer {
@@ -115,6 +139,10 @@ footer {
 	padding: .5em 0 1em;
 }
 .speaker {
+	& img {
+		animation: speaker-pulse 2s ease-in-out infinite alternate;
+	}
+
 	& h1 {
 		color: var(--accent-color);
 	}
@@ -125,6 +153,15 @@ footer {
 		padding: .5em 0; 
 	}	
 }
+
+@keyframes speaker-pulse {
+		to {
+			filter: drop-shadow(0 0 10px var(--accent-color)) brightness(1.25);
+			transform: scale(1.1);
+		}
+	}
+
+
 .large {
 	font-size: 125%;
 }
@@ -151,7 +188,7 @@ footer {
 	& a:link, a:visited { 
 		color: var(--light_menu);
 	}
-	& a:hover, a:focus, a.current {
+	& a:hover, a:focus, a:not([href]) {
 		background-color: var(--mid_menu);
 		color: var(--dark_menu);
 	}
@@ -263,5 +300,15 @@ footer {
 			float: left;
 			margin: .75em 1em;
 		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.speaker img {
+		animation: none !important;
+	}
+	aside img {
+		transition: none !important;
+		transform: none !important;
 	}
 }
